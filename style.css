@@ -1,0 +1,194 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100vh; /* Altura completa de la pantalla */
+
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.column {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    background-color: #f0f0f0; /* Color de fondo para distinguir las columnas */
+}
+
+/* Opcional: diferentes colores para cada columna */
+/*COLUMNA 1---------------------------------------------------------------------------------------------------*/
+#column1 {
+    background-color: green;
+}
+
+
+#column1 img{
+
+    border-radius: 10px;
+    width: 600px;
+    height: 900px;
+}
+
+#column1 .card-back{
+    background-color: lightgreen;
+    display: flex;
+    flex-direction: column;
+}
+/*COLUMNA 2--------------------------------------------------------------------------------------------------*/
+#column2 {
+    background-color: rgb(255, 217, 0);
+}
+
+#column2 img{
+
+    border-radius: 10px;
+    width: 600px;
+    height: 900px;
+}
+#column2 .card-back {
+    background-color: hsl(60, 100%, 71%);
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+/*COLUMNA 3---------------------------------------------------------------------------------------------------*/
+#column3 {
+    background-color: red;
+}
+#column3 img{
+
+    border-radius: 10px;
+    width: 600px;
+    height: 900px;
+}
+#column3 .card-back{
+    background-color: #ff5757;
+    display: flex;
+    flex-direction: column;
+}
+/*------------------------------------------------------------------------------------------------------------*/
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    height: 100vh; /* Altura completa de la pantalla */
+    position: relative; /* Necesario para que los elementos hijos con position: absolute se posicionen correctamente */
+}
+
+.card {
+    width: 600px;
+    height: 900px;
+    perspective: 1000px;
+  }
+  
+  .card-inner {
+    width: 600px;
+    height: 900px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.999s;
+  }
+  
+  .card:hover .card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .card-front,
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .card-front {
+    width: 600px;
+    height: 900px;
+    perspective: 1000px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 24px;
+    transform: rotateY(0deg);
+  }
+  /* .card-front img{
+    width: 600px;
+    height: 900px;
+  } */
+  
+  .card-back {
+
+    color: black;
+    display: flex;
+    align-items: center;
+    border: 10px solid black;
+    border-radius: 10px;
+    justify-content: center;
+    font-size: 50px;
+    transform: rotateY(180deg);
+  }
+/*PARTE POLICIA-----------------------------------------------------------*/
+  .parte_policia{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 100px;
+    background: linear-gradient(to right, blue,white, red);
+  }
+
+
+  .policia{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /*BOTON DE DESPLAZAR--------------------------------------------------------------*/
+  .button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 15px 20px;
+    background-color: #212121;
+    border: none;
+    font: inherit;
+    color: #e8e8e8;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: not-allowed;
+    overflow: hidden;
+    transition: all 0.3s ease cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .button button{
+    background-color: #212121;
+    height: 5vh;
+    width: 100vw;
+    border: none;
+    text-decoration: none;
+    color: white;
+    font-size: 100px;
+  }
+
+
+  
